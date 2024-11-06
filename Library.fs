@@ -44,7 +44,7 @@ type SamplePredictor(guid: string) =
         member __.OnCommandLineExecuted(client: PredictionClient, commandLine: string, success: bool) : unit = ()
 
 type Init() =
-    let identifier = "843b51d0-55c8-4c1a-8116-f0728d419306"
+    let identifier = "c7f63bae-8f2a-4ded-b768-5897e4c63076"
 
     interface IModuleAssemblyInitializer with
         member __.OnImport() =
