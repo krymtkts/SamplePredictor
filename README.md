@@ -14,6 +14,7 @@ Get-PSReadLineOption | Select-Object PredictionSource
 # ----------------
 # HistoryAndPlugin
 
+dotnet build
 Import-Module .\bin\Debug\net6.0\SamplePredictor.dll
 
 # Confirm SamplePredictor loaded.
