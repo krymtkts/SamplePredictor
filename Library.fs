@@ -62,10 +62,10 @@ type SamplePredictor(guid: string) =
 
             if String.IsNullOrWhiteSpace(input) then
                 // NOTE: cannot pass null.
-                Logger.LogFile([ "suggestion with empty input" ])
+                Logger.LogFile([ $"suggestion with empty input. client: '{client.Name}' '{client.Name}' " ])
                 SuggestionPackage(List<PredictiveSuggestion>([]))
             else
-                Logger.LogFile([ $"suggestion with input '{input}'" ])
+                Logger.LogFile([ $"suggestion with input '{input}'. client: '{client.Name}' '{client.Name}" ])
                 SuggestionPackage(List<PredictiveSuggestion>([ PredictiveSuggestion(sprintf "%s HELLO WORLD" input) ]))
 
 

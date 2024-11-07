@@ -33,6 +33,11 @@ Then you can see a sample suggestion as follows.
 > sss HELLO WORLD                                                                  [SamplePredictor]
 ```
 
+```powershell
+# remove the debug log.
+rm ~/SamplePredictor-debug.log
+```
+
 ## Known issues
 
 A nested PowerShell session seems unable to find `FSharp.Core.dll`.
