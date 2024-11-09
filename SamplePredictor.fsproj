@@ -11,6 +11,12 @@
     <PublishDir>..\bin\CompletionPredictor</PublishDir>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <!-- Disable PDB generation for the Release build -->
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>None</DebugType>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Include="Library.fs" />
   </ItemGroup>
