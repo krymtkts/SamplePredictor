@@ -66,7 +66,14 @@ type SamplePredictor(guid: string) =
                 SuggestionPackage(List<PredictiveSuggestion>([]))
             else
                 Logger.LogFile([ $"suggestion with input '{input}'. client: '{client.Name}' '{client.Name}" ])
-                SuggestionPackage(List<PredictiveSuggestion>([ PredictiveSuggestion(sprintf "%s HELLO WORLD" input) ]))
+
+                SuggestionPackage(
+                    List<PredictiveSuggestion>(
+                        [ PredictiveSuggestion($"prediction %s{input}")
+                          PredictiveSuggestion($"prediction %s{input} %s{input}")
+                          PredictiveSuggestion($"prediction %s{input} %s{input} %s{input}") ]
+                    )
+                )
 
 
         member __.CanAcceptFeedback(client: PredictionClient, feedback: PredictorFeedbackKind) : bool =
